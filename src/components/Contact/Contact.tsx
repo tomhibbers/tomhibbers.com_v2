@@ -3,12 +3,23 @@ import emailIcon from "../../assets/email-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg"
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useState } from 'react'
+// import React from 'react';
+// import { ThemeContext } from '../../context/themeContext';
+// import { ThemeContextType } from '../../@types/theme';
 
 export function Contact(){
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('#');
   const [phone, setPhone] = useState('');
   const [isHuman, setHuman] = useState(false);
   const REACT_APP_CAPTCHA_SITE_KEY: string = process.env.REACT_APP_CAPTCHA_SITE_KEY!;
+  // const { theme } = React.useContext(ThemeContext) as ThemeContextType;
+  // const recaptchaRef = React.createRef<ReCAPTCHA>();
+
+  // React.useEffect(() => {
+  //   if(recaptchaRef.current){
+  //     recaptchaRef.current.reset();
+  //   }
+  // }, [theme]);
   
   function enableContactDetails(this: any) {
     setEmail("mailto:tomhibbers@gmail.com");
@@ -39,10 +50,11 @@ export function Contact(){
             <img src={phoneIcon} alt="Phone" />
           </button>
         </a>
-        <ReCAPTCHA
+        <ReCAPTCHA 
             sitekey={REACT_APP_CAPTCHA_SITE_KEY}
             onChange={enableContactDetails}
-            theme="dark"
+            theme='dark'
+            // size="compact"
         ></ReCAPTCHA>
       </div>
         
