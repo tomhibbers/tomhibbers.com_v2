@@ -6,6 +6,8 @@ name: Deploy to Live Channel
   push:
     branches:
       - main
+env:
+  REACT_APP_CAPTCHA_SITE_KEY: ${{ secrets.REACT_APP_CAPTCHA_SITE_KEY }}
 jobs:
   deploy_live_website:
     runs-on: ubuntu-latest

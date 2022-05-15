@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-
 export const Container = styled.section`
+
+
   margin-top: 20rem;
 
   header{
@@ -16,37 +17,33 @@ export const Container = styled.section`
     }
   }
 
-  .contacts{
+  .contacts{    
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    place-items: center;
-    margin-top: 8rem;
+    flex-wrap: wrap;
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      gap: 2rem;
+      background-color: var(--green);
+      border-radius: 1.4rem;
+      transition: background-color 0.25s;
+      margin: 4rem 10% 4rem 10%;
+      button{
+        display: block;
+        width: 100%;
+        padding: 1.6rem 2.8rem;
+        img{
+          width: 4rem;
+          height: 4rem;
+        }
+    }}
     div{
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 50%;
-      max-width: 40rem;
-      gap: 2rem;
-      background-color: var(--green);
-      border-radius: 1.4rem;
-      padding: 1.6rem 2.8rem;
-      transition: background-color 0.25s;
-      img{
-        width: 4rem;
-      }
-      a{
-        color: var(--black);
-        font-weight: 500;
-      }
-      &:hover{
-        background-color: var(--pink);
-        a{
-          color: #FFF;
-        }
-      }
+      width:  100%;
     }
   }
 
@@ -54,6 +51,10 @@ export const Container = styled.section`
   @media(max-width: 960px){
     .contacts{
       flex-direction: column;
+      a{
+        width: 100%;
+        flex-direction: column;
+      }
       div{
         width: 100%;
         flex-direction: column;
@@ -61,4 +62,4 @@ export const Container = styled.section`
     }
   }
   
-`
+`;

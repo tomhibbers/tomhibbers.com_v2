@@ -96,6 +96,7 @@ export function Portfolio() {
               <ul className="tech-list">
                 <li>React</li>
                 <li>Typescript</li>
+                <li>Styled Components</li>
               </ul>
             </footer>
           </div>
