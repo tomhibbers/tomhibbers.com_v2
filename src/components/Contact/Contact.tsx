@@ -1,10 +1,20 @@
 import { Container } from "./styles";
 import emailIcon from "../../assets/email-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg"
-// import { Form } from "../Form/Form";
-
+import ReCAPTCHA from 'react-google-recaptcha';
+import { useState } from 'react'
 
 export function Contact(){
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [isHuman, setHuman] = useState(false);
+  const REACT_APP_CAPTCHA_SITE_KEY: string = process.env.REACT_APP_CAPTCHA_SITE_KEY!;
+  
+  function enableContactDetails(this: any) {
+    setEmail("mailto:tomhibbers@gmail.com");
+    setPhone("tel:+27822987183");
+    setHuman(true);
+  };
 
   return(
     <Container id="contact">
@@ -13,15 +23,29 @@ export function Contact(){
         <p>If you've seen my potential or want to talk to me, don't hesitate to send me a message.</p>
       </header>
       <div className="contacts">
-        <div>
-          <img src={emailIcon} alt="Email" />
-          <a href="mailto:tomhibbers@gmail.com">tomhibbers@gmail.com</a>
-        </div>
-        <div>
-          <img src={phoneIcon} alt="Phone" />
-          <a href="tel:+27822987183">(+27) 82-298-7183</a>
-        </div>  
+        <a href={email} target="_blank" rel="noreferrer">
+          <button
+            type="button"
+            disabled={!isHuman}
+          >
+            <img src={emailIcon} alt="Email" />
+          </button>
+        </a>
+        <a href={phone} target="_blank" rel="noreferrer">
+          <button
+            type="button"
+            disabled={!isHuman}
+          >
+            <img src={phoneIcon} alt="Phone" />
+          </button>
+        </a>
+        <ReCAPTCHA
+            sitekey={REACT_APP_CAPTCHA_SITE_KEY}
+            onChange={enableContactDetails}
+            theme="dark"
+        ></ReCAPTCHA>
       </div>
+        
       {/* <Form></Form> */}
     </Container>
   )
