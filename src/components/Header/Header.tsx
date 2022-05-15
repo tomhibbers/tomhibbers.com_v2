@@ -2,12 +2,18 @@ import { Container } from './styles'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
-
 import cvfile from '../../assets/tomhibberscv.pdf'
+import { ThemeContext } from '../../context/themeContext';
+import { ThemeContextType, Theme } from '../../@types/theme';
+import React from 'react';
+
 export function Header() {
   const [isActive, setActive] = useState(false)
+  const { theme, changeTheme } = React.useContext(ThemeContext) as ThemeContextType;
 
   function toggleTheme() {
+    let newTheme = theme === 'dark' ? 'light' : 'dark'; 
+    changeTheme(newTheme as Theme);
     let html = document.getElementsByTagName('html')[0]
     html.classList.toggle('light')
   }

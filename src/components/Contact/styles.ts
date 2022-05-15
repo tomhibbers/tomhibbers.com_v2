@@ -52,11 +52,13 @@ export const Container = styled.section`
     .contacts{
       flex-direction: column;
       a{
-        width: 100%;
+        width: 80%;
+        margin: 1rem 10% 1rem 10%;
         flex-direction: column;
       }
       div{
         width: 100%;
+        margin: 1rem 0 1rem 0;
         flex-direction: column;
       }
     }
