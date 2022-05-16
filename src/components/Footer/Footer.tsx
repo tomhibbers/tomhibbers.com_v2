@@ -1,10 +1,7 @@
 import { Container } from './styles'
-
-// import reactIcon from '../../assets/react-icon.svg'
 import linkedinIcon from '../../assets/linkedin.png'
 import githubIcon from '../../assets/github.png'
-// import instagramIcon from '../../assets/instagram.png'
-// import discordIcon from '../../assets/discord.png'
+// import twitterIcon from '../../assets/twitter-icon.svg'
 
 export function Footer() {
   return (
@@ -22,7 +19,7 @@ export function Footer() {
 
       <div className="social-media">
         <a
-          href="https://www.linkedin.com/in/tomhibbers/"
+          href="https://www.linkedin.com/in/tom-hibbers/"
           target="_blank"
           rel="noreferrer"
         >
@@ -36,6 +33,14 @@ export function Footer() {
         >
           <img src={githubIcon} alt="GitHub" />
         </a>
+
+        {/* <a
+          href="https://twitter.com/tomhibbers"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={twitterIcon} alt="Twitter" />
+        </a> */}
       </div>
     </Container>
   )
