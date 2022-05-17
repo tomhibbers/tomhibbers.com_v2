@@ -6,6 +6,7 @@ import angularIcon from "../../assets/angular-icon.svg";
 import typescriptIcon from "../../assets/typescript-icon.svg";
 import csharpIcon from "../../assets/csharp-icon.svg";
 import dotnetIcon from "../../assets/dotnet-icon.svg";
+import javaIcon from "../../assets/java-icon.png";
 import ScrollAnimation from "react-animate-on-scroll";
 import profilepic from'../../assets/profilepic.jpg';
 
@@ -21,7 +22,7 @@ export function About(){
           <p>My name is Tom Hibbers, I am a software engineer with a great passion for programming. I am passionate about building solutions that add value to people's lives and at the same time challenging myself.</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.4 * 1000} style={{marginTop: "2rem", marginBottom: "2rem"}}>
-          <p>I develop full stack solutions using Angular, React and .NET. I have experience in the FinTech and ERP spaces. I love improving myself with each project I get my hands on.</p>
+          <p>I develop full stack solutions using Angular, React, .NET and Java. I have experience in the FinTech and ERP spaces. I love improving myself with each project I get my hands on.</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInLeft" delay={0.6 * 1000}>
           <p>I am hardworking and passionate about what I do.</p>
@@ -59,6 +60,11 @@ export function About(){
           <div className="hability">
           <ScrollAnimation animateIn="fadeInUp" delay={0.7 * 1000}>
             <img src={dotnetIcon} alt=".NET" />
+          </ScrollAnimation>
+          </div>
+          <div className="hability">
+          <ScrollAnimation animateIn="fadeInUp" delay={0.7 * 1000}>
+            <img src={javaIcon} alt="Java" />
           </ScrollAnimation>
           </div>
 
