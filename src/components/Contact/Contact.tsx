@@ -67,7 +67,7 @@ export function Contact() {
     window.open("mailto:tomhibbers@gmail.com", "_blank");
   }
   function onClickPhone() {
-    window.open("tel:+27822987183", "_blank");
+    window.open("tel:+270822987183", "_blank");
   }
 
   return (
