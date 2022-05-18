@@ -1,7 +1,7 @@
 import { Container } from './styles'
 import linkedinIcon from '../../assets/linkedin.png'
 import githubIcon from '../../assets/github.png'
-// import twitterIcon from '../../assets/twitter-icon.svg'
+import twitterIcon from '../../assets/twitter-icon.svg'
 
 export function Footer() {
   return (
@@ -34,13 +34,13 @@ export function Footer() {
           <img src={githubIcon} alt="GitHub" />
         </a>
 
-        {/* <a
+        <a
           href="https://twitter.com/tomhibbers"
           target="_blank"
           rel="noreferrer"
         >
           <img src={twitterIcon} alt="Twitter" />
-        </a> */}
+        </a>
       </div>
     </Container>
   )

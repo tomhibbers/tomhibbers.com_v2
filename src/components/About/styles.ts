@@ -6,79 +6,71 @@ export const Container = styled.section`
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 
-  .hard-skills{
+  .hard-skills {
     margin-top: 1.6rem;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.8rem;
   }
-  .hability{
+  .hability {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    img{
+    img {
       width: 3.4rem;
     }
   }
 
-  h2{
+  h2 {
     display: inline-block;
     margin-bottom: 2rem;
     border-bottom: 0.2rem solid var(--blue);
   }
 
-  h3{
+  h3 {
     margin-top: 2rem;
     color: var(--green);
   }
 
-  p{
+  p {
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
     font-weight: 500;
   }
-  
-  
 
-  .about-image{
+  .about-image {
     text-align: center;
-   img{
-    border-radius: 50%;
-    border: 3px solid #C9D1D9;
-    padding: 5px;
-     margin-top: 2rem;
-     width: 50%;
-     filter: grayscale(1);
-     transition: filter 0.5s;
-     &:hover{
-       filter: grayscale(0);
-     }
-   }
+    img {
+      border-radius: 50%;
+      border: 3px solid #c9d1d9;
+      padding: 5px;
+      margin-top: 2rem;
+      width: 50%;
+      filter: grayscale(1);
+      transition: filter 0.5s;
+      //  &:hover{
+      //    filter: grayscale(0);
+      //  }
+    }
   }
-
   @media only screen and (max-width: 480px) {
     .about-image {
       max-width: 100%;
       margin-top: 4rem;
     }
-    .about-image img {
-      width: 80%;
-    }
   }
-
-  @media (max-width: 960px){
+  @media (max-width: 960px) {
     display: block;
     text-align: center;
-
-    .about-image{
-      display: flex;
+    .about-image {
+      img {
+        width: 80%;
+      }
     }
-    .hard-skills{
+    .hard-skills {
       justify-content: center;
     }
-    
   }
-
-`
+`;
