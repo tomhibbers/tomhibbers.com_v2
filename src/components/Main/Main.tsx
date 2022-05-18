@@ -15,6 +15,7 @@ import reactIcon from "../../assets/react-icon.svg";
 import sassIcon from "../../assets/sass-icon.svg";
 import typescriptIcon from "../../assets/typescript-icon.svg";
 import vscodeIcon from "../../assets/vscode-icon.svg";
+import { Feed } from "../Feed/Feed";
 
 export function Main(){
   return(
@@ -245,6 +246,7 @@ export function Main(){
       <About></About>
       <Portfolio></Portfolio>
       <Contact></Contact>
+      <Feed></Feed>
     </Container>
   );
 }
