@@ -37,7 +37,7 @@ export function Portfolio() {
               </div>
             </header>
             <div className="body">
-              <h3>TomHibbers.com V1</h3>
+              <h3>Tom Hibbers Website V1</h3>
               <p>
                 My first personal website. Written in Angular and Scully. My
                 first foray into Jamstack. Lots to learn and lots of fun.
@@ -88,7 +88,7 @@ export function Portfolio() {
               </div>
             </header>
             <div className="body">
-              <h3>TomHibbers.com V2</h3>
+              <h3>Tom Hibbers Website V2</h3>
               <p>
                 My personal website, rewritten in ReactJS. I'm moving away from
                 Jamstack for this project as adding embedded widgets from social
